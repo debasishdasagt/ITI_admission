@@ -35,18 +35,20 @@ and open the template in the editor.
     <center>
         <div id="head_r">
             
-            <table width="800" border="0">
+            <table width="70%" border="0">
                 <tr>
                     <td valign="bottom"><img src="images/sakhsharata_logo.jpg" class="logo"></td>
                     <td valign="bottom"><img src="images/skill_india_logo.jpg" class="logo"></td>
-                    <td valign="top"><div style="width: 600px" class="header_txt">
+                    <td valign="top" width="40%"><div style="width: 100%" class="header_txt">
                             <b>Industrial Training Institute</b><br>
-                            <span style="font-size: 15px">Dept. of Industries & Commerce</span>
+                            <span style="font-size: 15px">Dept. of Industries & Commerce, Govt. of Tripura</span>
                             
                             
                             
                             
                         </div></td>
+                        
+                        <td width="40%" align="right" valign="middle" ><span class="header_txt">Admission 2018</span></td>
                 </tr>
                 
                 
