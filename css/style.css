@@ -8,6 +8,17 @@ and open the template in the editor.
     Author     : Debasish
 */
 
+.bdy{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ce6fc+0,32c3ef+52,06a6e5+100 */
+background: #9ce6fc; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #9ce6fc 0%, #32c3ef 52%, #06a6e5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  #9ce6fc 0%,#32c3ef 52%,#06a6e5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  #9ce6fc 0%,#32c3ef 52%,#06a6e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', endColorstr='#06a6e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
 #maincontainer
 {
     padding: 10px;
@@ -52,23 +63,33 @@ and open the template in the editor.
     background-color: #4aa21e;
 }
 
+
+.header_txt{
+    color: white;
+    font-family: "calibri";
+    font-size: 30px;
+    padding-left: 30px;
+    line-height:0.7;
+    margin-top: 5px;
+}
+
 #head_r
 {
     background-color: #267f17;
-    height:50px;
+    height:60px;
     width: 100%; 
     box-shadow: 0px 0px 2px 1px black; 
 }
 
 .logo
 {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border:1px solid grey;
-    border-radius: 37px;
-    box-shadow: 0px 0px 2px 0px black;
+    border-radius: 31px;
+    box-shadow: 0px 1px 2px 0px black;
     margin-top: 5px;
-    margin-right: 16px;
+    margin-right: 20px;
 }
 
 

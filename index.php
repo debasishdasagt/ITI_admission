@@ -23,23 +23,30 @@ and open the template in the editor.
 
                 $(document).ready(function()
                 {
-                   $('#maincontainer').css("height",Math.round(wheight*0.8)+"px");
+                   $('#maincontainer').css("height",Math.round(wheight*0.82)+"px");
                    $('#maincontainer').css("width",Math.round(wwidth*0.7)+"px");
                    $('#maincontainer').css("margin-left","-"+Math.round((wwidth*0.7)/2)+"px");
-                   $('#maincontainer').css("margin-top","-"+Math.round((wheight*0.7)/2)+"px");
+                   $('#maincontainer').css("margin-top","-"+Math.round((wheight*0.75)/2)+"px");
                 });
 
 </script>
     </head>
-    <body style="background-color: #61bcbc; margin: 0px">
+    <body style=" margin: 0px" class="bdy">
     <center>
         <div id="head_r">
             
             <table width="800" border="0">
                 <tr>
-                    <td><img src="images/sakhsharata_logo.jpg" class="logo"></td>
-                    <td><img src="images/skill_india_logo.jpg" class="logo"></td>
-                    <td><div style="width: 650px">cd</div></td>
+                    <td valign="bottom"><img src="images/sakhsharata_logo.jpg" class="logo"></td>
+                    <td valign="bottom"><img src="images/skill_india_logo.jpg" class="logo"></td>
+                    <td valign="top"><div style="width: 600px" class="header_txt">
+                            <b>Industrial Training Institute</b><br>
+                            <span style="font-size: 15px">Dept. of Industries & Commerce</span>
+                            
+                            
+                            
+                            
+                        </div></td>
                 </tr>
                 
                 
