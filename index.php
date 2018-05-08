@@ -33,7 +33,22 @@ and open the template in the editor.
     </head>
     <body style="background-color: #61bcbc; margin: 0px">
     <center>
-        <div id="head_r"></div>
+        <div id="head_r">
+            
+            <table width="800" border="0">
+                <tr>
+                    <td><img src="images/sakhsharata_logo.jpg" class="logo"></td>
+                    <td><img src="images/skill_india_logo.jpg" class="logo"></td>
+                    <td><div style="width: 650px">cd</div></td>
+                </tr>
+                
+                
+            </table>
+            
+            
+            
+            
+        </div>
         <div class="m" id="maincontainer">
             <iframe style="width: 100%; height: 100%; border: 0px" name="form_frame" src="pages/start.php"></iframe>
             

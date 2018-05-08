@@ -54,10 +54,21 @@ and open the template in the editor.
 
 #head_r
 {
-    background-color: #215789;
-    height:70px;
+    background-color: #267f17;
+    height:50px;
     width: 100%; 
-    border-bottom: 2px solid #61aef7;
+    box-shadow: 0px 0px 2px 1px black; 
+}
+
+.logo
+{
+    width: 70px;
+    height: 70px;
+    border:1px solid grey;
+    border-radius: 37px;
+    box-shadow: 0px 0px 2px 0px black;
+    margin-top: 5px;
+    margin-right: 16px;
 }
 
 
