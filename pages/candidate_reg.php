@@ -11,8 +11,16 @@ and open the template in the editor.
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/jquery.datetimepicker.css">
         
+        
         <script type="text/javascript" src="../js/jquery-latest.js"></script>
         <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
+        <script type='text/javascript'>
+        function refreshCaptcha(){
+                var img = document.images['captchaimg'];
+                img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
+        }
+        </script>
+        
     </head>
     <body>
     <center>
@@ -21,7 +29,7 @@ and open the template in the editor.
             <table border="0">
                 <tr>
                     <td><div class="cur_status"><b>1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registration</b></div></td>
-                    <td><div class="pending_status"><b>2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Details</b></div></td>
+                    <td><div class="pending_status"><b>2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Candidate Details</b></div></td>
                     <td><div class="pending_status"><b>3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload</b></div></td>
                     <td><div class="pending_status"><b>4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Review & Submit</b></div></td>
                 </tr>
@@ -61,7 +69,13 @@ and open the template in the editor.
         <div id="btn_bar">
             
             <div style="float:right;margin-right: 70px">
-                <table border='0'><tr> <td><div class='btn'>Submit</div></td></tr></table>
+                <table border='0' cellpadding="5"><tr>
+                        <td valign="middle" style="background-color: #f2f0f0; border-radius: 5px"><table border="0"><tr>
+                                    <td><img src="../phpcaptcha/captcha.php?rand=<?php echo rand();?>" id='captchaimg' style="height: 30px; margin-right: 10px; margin-left: 30px"></td>
+                                    <td><a href='javascript: refreshCaptcha();'><img src="../images/refreshicon.png" border="0" height="20" width="20" style="margin-right: 20px"></a> </td>
+                                <td><input type="text" class="txtbx" placeholder="Captcha Here" style="width: 100px"></td>
+                                <td width="30"><img class="ajax_s" src="../images/loading.gif"></td></tr></table></td>
+                        <td><div class='btn' style="margin-left: 50px">Submit</div></td></tr></table>
             </div>
         
     </center>

@@ -75,7 +75,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
 
 #head_r
 {
-    background-color: #267f17;
+    background-color: #3846d0;
     height:60px;
     width: 100%; 
     box-shadow: 0px 0px 2px 1px black; 
@@ -174,4 +174,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     padding: 3px;
     background-color: #0d82e3;
     cursor: pointer;
+}
+
+.ajax_s
+{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
 }
