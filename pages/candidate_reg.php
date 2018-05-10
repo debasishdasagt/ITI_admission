@@ -14,7 +14,9 @@ and open the template in the editor.
         
         <script type="text/javascript" src="../js/jquery-latest.js"></script>
         <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
         <script type='text/javascript'>
+        
         function refreshCaptcha(){
                 var img = document.images['captchaimg'];
                 img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
@@ -43,22 +45,29 @@ and open the template in the editor.
                 <table border="0" cellspacing="0" cellpadding="10">
                     <tr>
                         <td>Candidate Name</td>
-                        <td><input type="text" id="can_name" name="can_name" class="txtbx" placeholder="Full Name" style="margin-right: 30px"></td>
+                        <td><input type="text" id="can_name" name="can_name" class="txtbx" placeholder="Full Name"></td>
+                        <td width="30"></td>
                         <td>Date of Birth</td> 
                         <td><input type="text" id="can_dob" name="can_dob" class="txtbx" placeholder="YYYY-MM-DD"></td>
+                         <td width="30"></td>
                     </tr>
                     <tr>
                         <td>Father's Name</td>
-                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father Name" style="margin-right: 30px"></td>
+                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father Name" ></td>
+                         <td width="30"></td>
                         <td>UID Number</td> 
-                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number"></td>
+                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()"><span id="uid_msg" class="ajax_msg"></span></td>
+                    
+                         <td width="30"></td>
                     </tr>
                     
                     <tr>
                         <td>Mobile Number</td>
-                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Primary Mobile number" style="margin-right: 30px"></td>
+                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Primary Mobile number"></td>
+                         <td width="30"></td>
                         <td>E-Mail Address</td> 
                         <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Candidate's E-Mail "></td>
+                         <td width="30"></td>
                     </tr>
                     
                 </table>

@@ -15,3 +15,4 @@ if(isset($_GET['can_uid']))
  else {
      echo "No paramiter passed";
  }
+ ?>

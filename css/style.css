@@ -182,3 +182,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     height: 20px;
     margin: 5px;
 }
+
+.ajax_msg
+{
+    font-size: 12px;
+    border-radius: 3px;
+    color: white;
+   
+}
