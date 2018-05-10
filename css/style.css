@@ -188,5 +188,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     font-size: 12px;
     border-radius: 3px;
     color: white;
-   
+   position: absolute;
+   padding: 3px;
 }

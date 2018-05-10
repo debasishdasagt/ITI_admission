@@ -56,18 +56,18 @@ and open the template in the editor.
                         <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father Name" ></td>
                          <td width="30"></td>
                         <td>UID Number</td> 
-                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()"><span id="uid_msg" class="ajax_msg"></span></td>
+                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()"><div id="uid_msg" class="ajax_msg"></div></td>
                     
-                         <td width="30"></td>
+                        <td width="30"><img id="uid_s" style="display: none" class="ajax_s"></td>
                     </tr>
                     
                     <tr>
                         <td>Mobile Number</td>
-                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Primary Mobile number"></td>
-                         <td width="30"></td>
+                        <td><input type="text" id="can_mob" name="can_mob" class="txtbx" placeholder="Primary Mobile number"></td>
+                         <td width="30"><img id="mob_s" style="display: none" class="ajax_s"></td>
                         <td>E-Mail Address</td> 
-                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Candidate's E-Mail "></td>
-                         <td width="30"></td>
+                        <td><input type="text" id="can_email" name="can_email" class="txtbx" placeholder="Candidate's E-Mail "></td>
+                         <td width="30"><img id="email_s" style="display: none" class="ajax_s"></td>
                     </tr>
                     
                 </table>
@@ -82,8 +82,8 @@ and open the template in the editor.
                         <td valign="middle" style="background-color: #f2f0f0; border-radius: 5px"><table border="0"><tr>
                                     <td><img src="../phpcaptcha/captcha.php?rand=<?php echo rand();?>" id='captchaimg' style="height: 30px; margin-right: 10px; margin-left: 30px"></td>
                                     <td><a href='javascript: refreshCaptcha();'><img src="../images/refreshicon.png" border="0" height="20" width="20" style="margin-right: 20px"></a> </td>
-                                <td><input type="text" class="txtbx" placeholder="Captcha Here" style="width: 100px"></td>
-                                <td width="30"><img class="ajax_s" src="../images/loading.gif"></td></tr></table></td>
+                                <td><input type="text" id="captcha_txtbx" class="txtbx" placeholder="Captcha Here" style="width: 100px" onchange="chk_captcha()"></td>
+                                <td width="30"><img class="ajax_s" src="../images/loading.gif" style="display: none" id="captcha_s"></td></tr></table></td>
                         <td><div class='btn' style="margin-left: 50px">Submit</div></td></tr></table>
             </div>
         

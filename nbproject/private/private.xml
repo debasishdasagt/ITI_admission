@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/xampp/htdocs/ITI_admission/handlers/captchacheck.php</file>
+            <file>file:/C:/xampp/htdocs/ITI_admission/handlers/captcha_test.php</file>
+            <file>file:/C:/xampp/htdocs/ITI_admission/js/validation.js</file>
+            <file>file:/C:/xampp/htdocs/ITI_admission/css/style.css</file>
+            <file>file:/C:/xampp/htdocs/ITI_admission/pages/candidate_reg.php</file>
+            <file>file:/C:/xampp/htdocs/ITI_admission/handlers/checkuid.php</file>
+            <file>file:/C:/xampp/htdocs/ITI_admission/phpcaptcha/demo.php</file>
+        </group>
     </open-files>
 </project-private>
