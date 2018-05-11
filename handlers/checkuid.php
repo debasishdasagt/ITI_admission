@@ -4,7 +4,7 @@ if(isset($_GET['can_uid']))
 {
     $sql= mysql_query("select count(*) as c from d_candidate where candidate_uid='".$_GET['can_uid']."' and record_status!='D'",$conn);
     $crr= mysql_fetch_array($sql);
-    if(@crr['c']==0)
+    if($crr['c']==0)
     {
         echo "1";
     }
