@@ -42,19 +42,20 @@ and open the template in the editor.
         
         <div id="form_bg">
             <form name="reg_form" id="reg_form">
-                <table border="0" cellspacing="0" cellpadding="10">
+                <table border="0" cellspacing="0" cellpadding="3">
                     <tr>
                         <td>Candidate Name</td>
                         <td><input type="text" id="can_name" name="can_name" class="txtbx" placeholder="Full Name"></td>
-                        <td width="30"></td>
+                        <td width="30"><img id="cnam_s" style="display: none" class="ajax_s"></td>
+                        <td rowspan="3" width="50"></td>
                         <td>Date of Birth</td> 
                         <td><input type="text" id="can_dob" name="can_dob" class="txtbx" placeholder="YYYY-MM-DD"></td>
-                         <td width="30"></td>
+                         <td width="30"><img id="dob_s" style="display: none" class="ajax_s"></td>
                     </tr>
                     <tr>
                         <td>Father's Name</td>
                         <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father Name" ></td>
-                         <td width="30"></td>
+                         <td width="30"><img id="cfnam_s" style="display: none" class="ajax_s"></td>
                         <td>UID Number</td> 
                         <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()"><div id="uid_msg" class="ajax_msg"></div></td>
                     
@@ -84,7 +85,7 @@ and open the template in the editor.
                                     <td><a href='javascript: refreshCaptcha();'><img src="../images/refreshicon.png" border="0" height="20" width="20" style="margin-right: 20px"></a> </td>
                                 <td><input type="text" id="captcha_txtbx" class="txtbx" placeholder="Captcha Here" style="width: 100px" onchange="chk_captcha()"></td>
                                 <td width="30"><img class="ajax_s" src="../images/loading.gif" style="display: none" id="captcha_s"></td></tr></table></td>
-                                <td><div class='btn' style="margin-left: 50px" onclick="submitreg()">Submit</div></td></tr></table>
+                                <td><div class='btn' style="margin-left: 50px" onclick="submitreg()" id="submit_btn">Submit</div></td></tr></table>
             </div>
         
     </center>

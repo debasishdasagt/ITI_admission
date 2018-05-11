@@ -29,6 +29,35 @@ function setmsg(id,msg,c )
 }
 
 
+function SHinfo(status_tag,status_img,show_hide)
+{
+    var img;
+    if(status_img=='cross')
+    {
+        img="../images/cross_ajax.png";
+    }
+    else if(status_img=='tick')
+    {
+        img="../images/tick_ajax.png";
+    }
+    else if(status_img=='loading')
+    {
+        img="../images/loading.gif";
+    }
+    
+    if(show_hide=="S")
+    {
+        document.getElementById(status_tag).src=img;
+        document.getElementById(status_tag).style="display: inline";
+    }
+    else if(show_hide=="H")
+    {
+        document.getElementById(status_tag).src=img;
+        document.getElementById(status_tag).style="display: none";
+    }
+    
+    
+}
 
 function chk_uid()
 {
@@ -37,35 +66,32 @@ function chk_uid()
     {
     if(u.length!==12)
     {
-        setmsg('uid_msg',"Invalid Aadhar Number","r")
-        document.getElementById('uid_s').src="../images/cross_ajax.png";
-        document.getElementById('uid_s').style="display: inline";
+        uidmsg="Invalid Aadhar Number";
+        setmsg('uid_msg',"Invalid Aadhar Number","r");
+        SHinfo('uid_s','cross','S');
     }
     else
     {
-        setmsg('uid_msg',"","g")
-        document.getElementById('uid_s').src="../images/loading.gif";
-        document.getElementById('uid_s').style="display: inline";
+        setmsg('uid_msg',"","g");
+        SHinfo('uid_s','loading','S');
         $.get("../handlers/checkuid.php?can_uid="+u,function(data,status)
         {
             if(data=="1")
             {
             uidmsg="";
-            document.getElementById('uid_s').src="../images/tick_ajax.png";
-            document.getElementById('uid_msg').style="display:none";
+            setmsg('uid_msg',"","g");
+            SHinfo('uid_s','tick','S');
             }
             else if(data == "0")
             {
-                uidmsg="Invalid Aadhar Number";
+                uidmsg="Aadhar Number Alredy Taken";
                 setmsg('uid_msg',"Invalid Aadhar Number","r");
-                document.getElementById('uid_s').src="../images/cross_ajax.png";
-                document.getElementById('uid_s').style="display: inline";
+                SHinfo('uid_s','cross','S');
             }});}}
     else
-    {   uidmsg="Please Enter Aadhar Number";
-        setmsg('uid_msg',"Please Enter Aadhar Number","r")
-        document.getElementById('uid_s').src="../images/cross_ajax.png";
-        document.getElementById('uid_s').style="display: inline";   }
+    {   uidmsg="Enter Aadhar Number";
+        setmsg('uid_msg',"Please Enter Aadhar Number","r");
+        SHinfo('uid_s','cross','S');}
 }
 
 
@@ -76,8 +102,7 @@ function chk_captcha()
     
         if(c!="")
         {
-        document.getElementById('captcha_s').src="../images/loading.gif";
-        document.getElementById('captcha_s').style="display: inline";
+        SHinfo('captcha_s','loading','S');
         $.get("../handlers/captchacheck.php?captcha_code="+c,function(data,status)
         {
             if(data=="1")
@@ -88,8 +113,8 @@ function chk_captcha()
             else if(data == "0")
             {
                 captchamsg="Invalid Captcha";
-                document.getElementById('captcha_s').src="../images/cross_ajax.png";
-                document.getElementById('captcha_s').style="display: inline";
+                
+                SHinfo('captcha_s','cross','S');
             }
         
         }
@@ -99,7 +124,7 @@ function chk_captcha()
     }
     else
     {
-        captchamsg="Please Enter Captcha text as displayed in the Image";
+        captchamsg="Enter Captcha text as displayed in the Image";
         document.getElementById('captcha_s').src="../images/cross_ajax.png";
         document.getElementById('captcha_s').style="display: inline";
     }
@@ -113,37 +138,41 @@ function chk_all()
     chk_captcha();
     
     if(document.getElementById('can_name').value=="")
-    {namemsg="Please Enter Candidate Name";}
-    else{namemsg="";}
+    {namemsg="Enter Candidate Name";SHinfo('cnam_s','cross','S'); }
+    else{namemsg="";SHinfo('cnam_s','tick','S');}
     
     if(document.getElementById('can_dob').value=="")
-    {dobmsg="Please Enter Candidate's Date of Birth";}
-    else{dobmsg="";}
+    {dobmsg="Enter Candidate's Date of Birth";SHinfo('dob_s','cross','S');}
+    else{dobmsg="";SHinfo('dob_s','tick','S');}
     
     if(document.getElementById('can_fname').value=="")
-    {fnamemsg="Please Enter Candidate's Father Name";}
-    else{fnamemsg="";}
+    {fnamemsg="Enter Candidate's Father Name";SHinfo('cfnam_s','cross','S');}
+    else{fnamemsg="";SHinfo('cfnam_s','tick','S');}
     
     if(document.getElementById('can_mob').value=="")
-    {mobmsg="Please Enter Candidate's Mobile Number";}
-    else{mobmsg="";}
+    {mobmsg="Enter Candidate's Mobile Number";SHinfo('mob_s','cross','S');}
+    else{mobmsg="";SHinfo('mob_s','tick','S');}
 }
 
 function msg_a(m)
 {
     if(m!=="")
-    return "\u2022 "+m+"\n";
+    return "\t\u2022 "+m+"\n";
     else
     return "";
 }
 
 function submitreg()
 {
+    document.getElementById('submit_btn').innerHTML="<img src='../images/loading2.gif' width='15' height='15'>";
+    $.ajaxSetup({async: false});
     chk_all();
-    var c=msg_a(namemsg)+msg_a(dobmsg)+msg_a(fnamemsg)+msg_a(uidmsg)+msg_a(captchamsg)+msg_a(mobmsg)+msg_a(emailmsg);
-    if(c!="")
+    var c=msg_a(namemsg)+msg_a(dobmsg)+msg_a(fnamemsg)+msg_a(uidmsg)+msg_a(mobmsg)+msg_a(emailmsg)+msg_a(captchamsg);
+    if(c!=="")
     {
-        alert(c);
+        alert("Plese Resolve following Issues\n\n"+c);
+        $.ajaxSetup({async: true});
+        document.getElementById('submit_btn').innerHTML="Submit"
     }
 }
 
