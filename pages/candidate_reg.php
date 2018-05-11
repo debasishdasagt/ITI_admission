@@ -84,7 +84,7 @@ and open the template in the editor.
                                     <td><a href='javascript: refreshCaptcha();'><img src="../images/refreshicon.png" border="0" height="20" width="20" style="margin-right: 20px"></a> </td>
                                 <td><input type="text" id="captcha_txtbx" class="txtbx" placeholder="Captcha Here" style="width: 100px" onchange="chk_captcha()"></td>
                                 <td width="30"><img class="ajax_s" src="../images/loading.gif" style="display: none" id="captcha_s"></td></tr></table></td>
-                        <td><div class='btn' style="margin-left: 50px">Submit</div></td></tr></table>
+                                <td><div class='btn' style="margin-left: 50px" onclick="submitreg()">Submit</div></td></tr></table>
             </div>
         
     </center>

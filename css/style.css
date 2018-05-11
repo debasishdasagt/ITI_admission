@@ -29,6 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     border: 1px solid #cccccc;
     border-radius: 5px;
     box-shadow: black 0px 0px 5px; 
+    min-width: 800px;
 }
 
 
