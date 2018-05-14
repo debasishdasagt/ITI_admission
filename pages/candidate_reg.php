@@ -15,6 +15,7 @@ and open the template in the editor.
         <script type="text/javascript" src="../js/jquery-latest.js"></script>
         <script type="text/javascript" src="../js/jquery.datetimepicker.full.js"></script>
         <script type="text/javascript" src="../js/validation.js"></script>
+        <script type="text/javascript" src="../js/dataProcessor.js"></script>
         <script type='text/javascript'>
         
         function refreshCaptcha(){

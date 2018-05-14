@@ -85,7 +85,7 @@ function chk_uid()
             else if(data == "0")
             {
                 uidmsg="Aadhar Number Alredy Taken";
-                setmsg('uid_msg',"Invalid Aadhar Number","r");
+                setmsg('uid_msg',"Aadhar Number Alredy Taken","r");
                 SHinfo('uid_s','cross','S');
             }});}}
     else
@@ -173,6 +173,10 @@ function submitreg()
         alert("Plese Resolve following Issues\n\n"+c);
         $.ajaxSetup({async: true});
         document.getElementById('submit_btn').innerHTML="Submit"
+    }
+    else
+    {
+        submitregdata();
     }
 }
 

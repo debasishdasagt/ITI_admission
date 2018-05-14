@@ -1,5 +1,6 @@
 <?php
 include_once '../config.php';
+include_once 'setpassword.php';
 $msg="";
 if(isset($_POST['can_uid']))
 {
@@ -14,9 +15,44 @@ if(isset($_POST['can_uid']))
     $qr=mysql_fetch_array($s);
     if($qr['reg']!="")
     {
-        
+        $regsql=  mysql_query("insert into d_candidate(candidate_reg,"
+                . "candidate_name,"
+                . "candidate_fname,"
+                . "candidate_dob,"
+                . "candidate_uid,"
+                . "candidate_mob,"
+                . "candidate_email,"
+                . "created_on,"
+                . "record_status) values('"
+                . $qr['reg']."','"
+                . $can_name."','"
+                . $can_fname."','"
+                . $can_dob."','"
+                . $can_uid."','"
+                . $can_mob."','"
+                . $can_email."',"
+                . "now(),'A')",$conn);
+        if($regsql)
+        {
+            $pas=passwd();
+            //echo "Registration Number is: ".$qr['reg']."\n Password is: ".$pas;
+            if(setpassword($qr['reg'],$pas)=='done')
+            {
+                echo "d~".$qr['reg']."~".$pas;
+            }
+            else
+            {
+                echo "Something went Wrong while setting password";
+            }
+        }
+ else {echo "Something went wrong \n\n".$regsql;}
     }
 }
 
-
+function passwd()
+{
+    $chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRDTUVWXYZ1234567890@######@@@@@@";
+    $password=substr(str_shuffle($chars),0,8);
+    return $password;
+}
 ?>
