@@ -14,20 +14,20 @@ and open the template in the editor.
     <center>
         
         <br><br><br><br><br>
-        <div id='login_box'>
+        <div class='login_box'>
             <span style="font-size: 24px"><b>Candidate Login</b></span>
             <br><br>
             
             <table border='0' cellspacing='0' cellpadding='5' width='300'>
                 <tr>
                     <td align='left'>
-                        <span style="opacity: 0.5" >Candidate's Registration Number</span><br>
-                        <input type="text" class='login_txtbx' placeholder="Reistration Number">
+                        <span style="opacity: 0.5; font-size: 12px" >Candidate's Registration Number</span><br>
+                        <input type="text" class='login_txtbx' placeholder="Reistration Number" style="background-image: url('../images/user.png')">
                     </td>
                 </tr><tr>
                     <td align='left'>
-                        <span style="opacity: 0.5" >Login Password</span><br>
-                        <input type="password" class='login_txtbx' placeholder="Password">
+                        <span style="opacity: 0.5 ; font-size: 12px">Login Password</span><br>
+                        <input type="password" class='login_txtbx' placeholder="Password" style="background-image: url('../images/password.png')">
                     </td>
                     
                 </tr>
@@ -41,7 +41,7 @@ and open the template in the editor.
                 <tr>
                     <td align='left'>
                         
-                        New Candidate Registration.
+                        <a href="candidate_reg.php" target="_self">New Candidate Registration</a>
                         <br>
                         Forget Password?
                     </td>

@@ -205,7 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     text-align: justify;
 }
 
-#login_box
+.login_box
 {
     width: 300px;
     background-color:#263a91;
@@ -218,7 +218,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     align-content: center;
     padding-left: 25px;
     padding-right: 25px;
+    font-size: 14px;
 }
+.login_box a
+{
+    color: white;
+}
+
 
 .login_txtbx
 {
@@ -230,6 +236,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     padding-left: 30px;
     border: 0px; 
     font-size: 14px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 5px;
+    margin-top: 3px;
 }
 
 .login_btn
