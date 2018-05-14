@@ -42,10 +42,10 @@ if(isset($_POST['can_uid']))
             }
             else
             {
-                echo "Something went Wrong while setting password";
+                echo "Server: Something went Wrong while setting password";
             }
         }
- else {echo "Something went wrong \n\n".$regsql;}
+ else {echo "Server: Something went wrong \n\n".$regsql;}
     }
 }
 

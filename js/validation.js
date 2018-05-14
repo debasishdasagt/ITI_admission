@@ -84,7 +84,7 @@ function chk_uid()
             }
             else if(data == "0")
             {
-                uidmsg="Aadhar Number Alredy Taken";
+                uidmsg="Aadhar Number Already Taken";
                 setmsg('uid_msg',"Aadhar Number Alredy Taken","r");
                 SHinfo('uid_s','cross','S');
             }});}}

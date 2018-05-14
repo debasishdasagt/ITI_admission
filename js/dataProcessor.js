@@ -12,7 +12,7 @@ function submitregdata()
         resarr=data.split("~");
         if(resarr[0]=='d')
         {
-            document.location="../pages/regpass.php?reg='"+resarr[1]+"'&pass='"+resarr[2]+"'";
+            document.location="../pages/regpass.php?reg="+resarr[1]+"&pass="+resarr[2];
         }
         else
         {

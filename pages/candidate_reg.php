@@ -22,6 +22,19 @@ and open the template in the editor.
                 var img = document.images['captchaimg'];
                 img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
         }
+        
+        
+        $(document).ready(function () {
+  //called when key is pressed in textbox
+  $("#can_mob").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        
+               return false;
+    }
+   });
+});
         </script>
         
     </head>
@@ -45,27 +58,27 @@ and open the template in the editor.
             <form name="reg_form" id="reg_form">
                 <table border="0" cellspacing="0" cellpadding="3">
                     <tr>
-                        <td>Candidate Name</td>
+                        <td>Candidate Name*</td>
                         <td><input type="text" id="can_name" name="can_name" class="txtbx" placeholder="Full Name"></td>
                         <td width="30"><img id="cnam_s" style="display: none" class="ajax_s"></td>
                         <td rowspan="3" width="50"></td>
-                        <td>Date of Birth</td> 
+                        <td>Date of Birth*</td> 
                         <td><input type="text" id="can_dob" name="can_dob" class="txtbx" placeholder="YYYY-MM-DD"></td>
                          <td width="30"><img id="dob_s" style="display: none" class="ajax_s"></td>
                     </tr>
                     <tr>
-                        <td>Father's Name</td>
+                        <td>Father's Name*</td>
                         <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father Name" ></td>
                          <td width="30"><img id="cfnam_s" style="display: none" class="ajax_s"></td>
-                        <td>UID Number</td> 
-                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()"><div id="uid_msg" class="ajax_msg"></div></td>
+                        <td>UID Number*</td> 
+                        <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()" maxlength="12"><div id="uid_msg" class="ajax_msg"></div></td>
                     
                         <td width="30"><img id="uid_s" style="display: none" class="ajax_s"></td>
                     </tr>
                     
                     <tr>
-                        <td>Mobile Number</td>
-                        <td><input type="text" id="can_mob" name="can_mob" class="txtbx" placeholder="Primary Mobile number"></td>
+                        <td>Mobile Number*</td>
+                        <td><input id="can_mob" name="can_mob" class="txtbx" placeholder="Primary Mobile number" maxlength="10"></td>
                          <td width="30"><img id="mob_s" style="display: none" class="ajax_s"></td>
                         <td>E-Mail Address</td> 
                         <td><input type="text" id="can_email" name="can_email" class="txtbx" placeholder="Candidate's E-Mail "></td>
@@ -73,10 +86,11 @@ and open the template in the editor.
                     </tr>
                     
                 </table>
+                <br>
                 
             </form>
         </div>
-        
+        <div style="width:90%;color:red;font-family: 'calibri'" align="left"><i><b>Note:</b> * (Star) Marked fields are Mandatory</i></div>
         <div id="btn_bar">
             
             <div style="float:right;margin-right: 70px">
