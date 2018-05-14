@@ -9,6 +9,32 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
         <link rel='stylesheet' href='../css/style.css'>
+        <script type="text/javascript" src="../js/jquery-latest.js"></script>
+        <script type="text/javascript">
+            function checklogin()
+            {
+                $.post("../handlers/canlogin.php",{'reg':document.getElementById('reg').value,'pass':document.getElementById('pass').value},
+                function(data,status)
+                {
+                   if(data=='1')
+                   {
+                       document.location="candidate_detail.php";
+                   }
+                   else if(data=='0')
+                   {
+                       alert('Wrong Registration Number or Login Password \n\n Please Retry');
+                   }
+                   else
+                   {
+                       alert(data);
+                   }
+                }
+        
+                )
+            }
+            </script>
+        
+        
     </head>
     <body>
     <center>
@@ -22,19 +48,19 @@ and open the template in the editor.
                 <tr>
                     <td align='left'>
                         <span style="opacity: 0.5; font-size: 12px" >Candidate's Registration Number</span><br>
-                        <input type="text" class='login_txtbx' placeholder="Reistration Number" style="background-image: url('../images/user.png')">
+                        <input type="text" class='login_txtbx' placeholder="Reistration Number" style="background-image: url('../images/user.png')" id="reg">
                     </td>
                 </tr><tr>
                     <td align='left'>
                         <span style="opacity: 0.5 ; font-size: 12px">Login Password</span><br>
-                        <input type="password" class='login_txtbx' placeholder="Password" style="background-image: url('../images/password.png')">
+                        <input type="password" class='login_txtbx' placeholder="Password" style="background-image: url('../images/password.png')" id="pass">
                     </td>
                     
                 </tr>
                 <tr>
-                    <td align='left'>
+                    <td align='center'>
                         
-                        <div class='login_btn'>Login</div>
+                        <div class='login_btn' onclick="checklogin()">Login</div>
                     </td>
                     
                 </tr>
@@ -43,7 +69,7 @@ and open the template in the editor.
                         
                         <a href="candidate_reg.php" target="_self">New Candidate Registration</a>
                         <br>
-                        Forget Password?
+                        Reset Password
                     </td>
                     
                 </tr>
