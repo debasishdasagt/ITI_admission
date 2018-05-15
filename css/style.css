@@ -150,7 +150,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce6fc', end
     position: fixed;
     bottom: 0px;
     padding: 10px;
-   margin-bottom: 5px;
+   background: rgba(255,255,255,0.7);
 }
 
 .txtbx

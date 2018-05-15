@@ -67,8 +67,8 @@ and open the template in the editor.
                          <td width="30"><img id="dob_s" style="display: none" class="ajax_s"></td>
                     </tr>
                     <tr>
-                        <td>Father's Name*</td>
-                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father Name" ></td>
+                        <td>Guardian's Name*</td>
+                        <td><input type="text" id="can_fname" name="can_fname" class="txtbx" placeholder="Candidate's Father / Husband Name" ></td>
                          <td width="30"><img id="cfnam_s" style="display: none" class="ajax_s"></td>
                         <td>UID Number*</td> 
                         <td><input type="text" id="can_uid" name="can_uid" class="txtbx" placeholder="Aadhar Number" onchange="chk_uid()" maxlength="12"><div id="uid_msg" class="ajax_msg"></div></td>

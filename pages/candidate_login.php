@@ -13,6 +13,8 @@ and open the template in the editor.
         <script type="text/javascript">
             function checklogin()
             {
+                document.getElementById('login_btn').innerHTML="<img src='../images/loading2.gif' width='20' height='20' style='margin-top: 5px'>";
+               document.getElementById('login_btn').disabled=true;
                 $.post("../handlers/canlogin.php",{'reg':document.getElementById('reg').value,'pass':document.getElementById('pass').value},
                 function(data,status)
                 {
@@ -23,10 +25,14 @@ and open the template in the editor.
                    else if(data=='0')
                    {
                        alert('Wrong Registration Number or Login Password \n\n Please Retry');
+                       document.getElementById('login_btn').innerHTML="Login";
+                       document.getElementById('login_btn').disabled=false;
                    }
                    else
                    {
                        alert(data);
+                       document.getElementById('login_btn').innerHTML="Login";
+                       document.getElementById('login_btn').disabled=false;
                    }
                 }
         
@@ -60,7 +66,7 @@ and open the template in the editor.
                 <tr>
                     <td align='center'>
                         
-                        <div class='login_btn' onclick="checklogin()">Login</div>
+                        <div class='login_btn' onclick="checklogin()" id="login_btn">Login</div>
                     </td>
                     
                 </tr>
